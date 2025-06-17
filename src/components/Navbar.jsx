@@ -18,8 +18,8 @@ export default function Navbar() {
   const navLinks = ['Book a Call', 'Services', 'Portfolio', 'Contact'];
 
   return (
-    <nav className="fixed top-0 left-0 w-full z-50 bg-[#0a0f1c]/80 backdrop-blur-md border-b border-gray-700 shadow-xl">
-      <div className="max-w-7xl mx-auto px-6 py-8 flex items-center justify-between">
+    <nav className="fixed top-0 left-0 w-full z-50 bg-[#0a0f1c]/80 backdrop-blur-md shadow-xl">
+      <div className="max-w-7xl mx-auto px-6 py-6 flex items-center justify-between">
         {/* Logo */}
         <motion.h1
           initial={{ opacity: 0, y: -10 }}
