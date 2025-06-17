@@ -54,11 +54,12 @@ export default function Testimonials() {
   const settings = {
     dots: true,
     infinite: true,
-    speed: 900,
+    speed: 800,
     slidesToShow: 2,
     slidesToScroll: 1,
     autoplay: true,
-    autoplaySpeed: 5000,
+    autoplaySpeed: 6000,
+    arrows: false,
     responsive: [
       {
         breakpoint: 768,
@@ -68,10 +69,10 @@ export default function Testimonials() {
   };
 
   return (
-    <section className="py-20 bg-gray-900 text-gray-100">
+    <section className="py-24 bg-white text-black">
       <div className="max-w-6xl mx-auto px-6">
         <motion.h2
-          className="text-4xl font-bold text-center mb-12"
+          className="text-4xl sm:text-5xl font-bold text-center mb-16"
           initial={{ opacity: 0, y: -30 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
@@ -92,26 +93,28 @@ export default function Testimonials() {
               viewport={{ once: true }}
             >
               <motion.div
-                whileHover={{ scale: 1.05, rotate: 1 }}
+                whileHover={{ scale: 1.05 }}
                 transition={{ type: 'spring', stiffness: 200 }}
-                className="bg-gray-800 shadow-xl rounded-xl p-8 mb-4 h-full flex flex-col items-center text-center"
+                className="bg-[#1e293b] rounded-2xl p-8 h-full flex flex-col items-center text-center shadow-xl"
               >
                 <img
                   src={client.photo}
                   alt={client.name}
-                  className="w-20 h-20 rounded-full object-cover mb-4 border-4 border-gray-700 shadow-md"
+                  className="w-20 h-20 rounded-full object-cover mb-4 border-4 border-[#facc15] shadow-md"
                 />
-                <h4 className="text-xl font-semibold mb-2 text-white">
+                <h4 className="text-xl font-semibold mb-1 text-white">
                   {client.name}
                 </h4>
-                <div className="flex justify-center mb-4 text-yellow-400">
+                <div className="flex justify-center mb-3 text-[#facc15]">
                   {Array(client.rating)
                     .fill(0)
                     .map((_, i) => (
                       <FaStar key={i} />
                     ))}
                 </div>
-                <p className="text-gray-300">{client.comment}</p>
+                <p className="text-sm text-gray-300 leading-relaxed">
+                  “{client.comment}”
+                </p>
               </motion.div>
             </motion.div>
           ))}

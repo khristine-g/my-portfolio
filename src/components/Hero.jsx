@@ -17,42 +17,46 @@ export default function Hero() {
         Your browser does not support the video tag.
       </video>
 
-      {/* Lighter Gradient Overlay for better video visibility */}
-      <div className="absolute inset-0 bg-gradient-to-b from-black/40 via-black/20 to-black/40 z-5" />
+      {/* Gradient Overlay */}
+      <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/30 to-black/80 z-10" />
 
-      {/* Overlay Content */}
-      <div className="relative z-10 flex flex-col items-center justify-center h-full px-6 text-center max-w-4xl mx-auto">
+      {/* Hero Content */}
+      <div className="relative z-20 flex flex-col items-center justify-center h-full px-6 text-center max-w-5xl mx-auto">
         <motion.h1
-          className="text-white text-4xl md:text-6xl font-extrabold leading-tight drop-shadow-lg"
-          initial={{ opacity: 0, y: 50 }}
+          className="text-white text-4xl md:text-6xl font-extrabold leading-tight tracking-tight drop-shadow-xl"
+          initial={{ opacity: 0, y: 40 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 1, ease: 'easeOut' }}
+          transition={{ duration: 1 }}
         >
-          Get a website that makes your life easier.
+          Digital Solutions That Do the Work for You
         </motion.h1>
 
         <motion.p
-          className="mt-6 text-lg md:text-xl text-gray-100 max-w-xl drop-shadow-md"
-          initial={{ opacity: 0, y: 50 }}
+          className="mt-6 text-lg md:text-xl text-gray-200 max-w-2xl drop-shadow-md"
+          initial={{ opacity: 0, y: 40 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.5, duration: 1, ease: 'easeOut' }}
+          transition={{ delay: 0.5, duration: 1 }}
         >
-          Professional web development tailored to your business needs — clean, fast, and reliable.
+          From smart websites to custom tools — we build fast, scalable digital products that make running your business easier.
         </motion.p>
 
-        <motion.button
-          className="mt-10 px-8 py-3 bg-stone-900 hover:bg-indigo-700 rounded-full text-white font-semibold text-lg shadow-lg shadow-amber-500/50 transition-colors"
-          initial={{ scale: 0.8, opacity: 0 }}
-          animate={{ scale: 1, opacity: 1 }}
-          transition={{ delay: 1.2, duration: 0.4, ease: 'easeOut' }}
-          whileHover={{ scale: 1.05 }}
+        <motion.div
+          className="mt-10 flex flex-col sm:flex-row gap-4"
+          initial={{ opacity: 0, scale: 0.95 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{ delay: 1.2, duration: 0.5 }}
         >
-          Get Started
-        </motion.button>
+          <button className="px-8 py-3 bg-amber-500 hover:bg-amber-600 text-black font-semibold rounded-full shadow-lg transition">
+            Get Started
+          </button>
+          <button className="px-8 py-3 border border-gray-200 text-white hover:bg-white/10 rounded-full transition font-semibold">
+            View Our Work
+          </button>
+        </motion.div>
       </div>
 
-      {/* Bottom SVG Shape */}
-      <div className="absolute bottom-0 left-0 w-full overflow-hidden leading-none rotate-180" style={{ height: '100px', zIndex: 10 }}>
+      {/* Bottom SVG */}
+      <div className="absolute bottom-0 left-0 w-full overflow-hidden leading-none rotate-180 z-20" style={{ height: '100px' }}>
         <svg
           className="relative block w-full h-full"
           xmlns="http://www.w3.org/2000/svg"
@@ -61,7 +65,7 @@ export default function Hero() {
         >
           <path
             d="M1200 120L0 16.48 0 0 1200 0 1200 120z"
-            fill="rgba(255, 255, 255, 0.95)"
+            fill="rgba(255, 255, 255, 0.97)"
           />
         </svg>
       </div>

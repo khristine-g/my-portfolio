@@ -33,7 +33,7 @@ export default function Footer() {
       >
         {/* Brand */}
         <div>
-          <h2 className="text-2xl font-bold mb-2">YourName.dev</h2>
+          <h2 className="text-2xl font-bold mb-2">kode.dev</h2>
           <p className="text-sm text-gray-400">
             I build digital solutions that empower modern businesses. Let's create something great together.
           </p>
@@ -66,7 +66,7 @@ export default function Footer() {
             />
             <button
               type="submit"
-              className="px-6 py-2 bg-blue-600 hover:bg-blue-700 rounded-lg font-medium transition"
+              className="px-6 py-2 bg-amber-600 hover:bg-amber-700 rounded-lg font-medium transition"
             >
               Subscribe
             </button>
@@ -102,7 +102,7 @@ export default function Footer() {
           <a href="https://twitter.com" target="_blank"><Twitter className="hover:text-white" /></a>
           <a href="https://facebook.com" target="_blank"><Facebook className="hover:text-white" /></a>
         </div>
-        <p className="text-sm text-gray-500">&copy; {new Date().getFullYear()} YourName.dev. All rights reserved.</p>
+        <p className="text-sm text-gray-500">&copy; {new Date().getFullYear()} kode.dev. All rights reserved.</p>
       </motion.div>
     </footer>
   );

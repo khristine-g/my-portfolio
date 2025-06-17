@@ -21,6 +21,11 @@ const accordionData = [
       "Not sure which tools, platforms, or strategies are right for your business? I provide tech consulting and digital strategy services...",
   },
   {
+    title: "Business Data Analytics",
+    content:
+      "Get insights that drive smarter decisions. I set up dashboards and reports using Google Looker Studio, Airtable Interfaces, and Notion to track growth and performance metrics.",
+  },
+  {
     title: "Ongoing Support & Maintenance",
     content:
       "I offer continuous website support, regular updates, backups, and performance monitoring to ensure your digital systems remain secure and efficient.",
@@ -127,7 +132,7 @@ export default function WorkTogether() {
               boxShadow: "0 8px 20px rgba(37, 99, 235, 0.5)",
             }}
             whileTap={{ scale: 0.95 }}
-            className="inline-block mt-10 px-8 py-4 bg-stone-900 text-white rounded-full font-semibold shadow-lg hover:bg-blue-700 transition-all duration-300"
+            className="inline-block mt-10 px-8 py-4 bg-yellow-400 text-black rounded-full font-semibold shadow-lg hover:bg-blue-700 transition-all duration-300"
           >
             Book a Discovery Call
           </motion.a>

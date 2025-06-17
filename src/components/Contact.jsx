@@ -37,8 +37,8 @@ export default function Contact() {
         transition={{ duration: 0.6 }}
         className="text-center mb-16"
       >
-        <h2 className="text-4xl font-bold text-gray-900">Get In Touch</h2>
-        <p className="mt-4 text-gray-600">
+        <h2 className="text-4xl font-bold text-[#0a1f44]">Get In Touch</h2>
+        <p className="mt-4 text-gray-600 max-w-xl mx-auto">
           We'd love to hear about your project and how we can help.
         </p>
       </motion.div>
@@ -58,20 +58,20 @@ export default function Contact() {
               variants={formVariants}
               className="relative"
             >
-              <label className="text-gray-700 text-sm font-medium absolute left-3 top-2 bg-white px-1 z-10">
+              <label className="text-[#0a1f44] text-sm font-medium absolute left-3 top-2 bg-white px-1 z-10">
                 {label}
               </label>
               {label !== "Message" ? (
                 <input
                   type={label.toLowerCase()}
                   required
-                  className="w-full px-4 pt-6 pb-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500"
+                  className="w-full px-4 pt-6 pb-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-yellow-400"
                 />
               ) : (
                 <textarea
                   rows={5}
                   required
-                  className="w-full px-4 pt-6 pb-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500"
+                  className="w-full px-4 pt-6 pb-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-yellow-400"
                 />
               )}
             </motion.div>
@@ -81,7 +81,7 @@ export default function Contact() {
             type="submit"
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
-            className="bg-blue-600 text-white px-6 py-3 rounded-full font-semibold shadow hover:bg-blue-700 transition"
+            className="bg-[#0a1f44] text-white px-6 py-3 rounded-full font-semibold shadow hover:bg-yellow-400 hover:text-[#0a1f44] transition"
           >
             Send Message
           </motion.button>
@@ -97,16 +97,16 @@ export default function Contact() {
         >
           <div className="space-y-4">
             <div className="flex items-center gap-3">
-              <Mail className="text-blue-600" />
-              <span className="text-gray-700">info@yourcompany.com</span>
+              <Mail className="text-yellow-400" />
+              <span className="text-[#0a1f44]">info@yourcompany.com</span>
             </div>
             <div className="flex items-center gap-3">
-              <Phone className="text-blue-600" />
-              <span className="text-gray-700">+1 234 567 8900</span>
+              <Phone className="text-yellow-400" />
+              <span className="text-[#0a1f44]">+1 234 567 8900</span>
             </div>
             <div className="flex items-center gap-3">
-              <MapPin className="text-blue-600" />
-              <span className="text-gray-700">123 Modern Ave, City, Country</span>
+              <MapPin className="text-yellow-400" />
+              <span className="text-[#0a1f44]">123 Modern Ave, City, Country</span>
             </div>
           </div>
 
@@ -119,7 +119,7 @@ export default function Contact() {
                 target="_blank"
                 rel="noopener noreferrer"
                 whileHover={{ scale: 1.2, rotate: 5 }}
-                className="text-blue-600 hover:text-blue-800 transition"
+                className="text-yellow-400 hover:text-[#0a1f44] transition"
               >
                 <Icon className="w-6 h-6" />
               </motion.a>
@@ -127,7 +127,7 @@ export default function Contact() {
           </div>
 
           {/* Google Map */}
-          <div className="mt-6 rounded-xl overflow-hidden shadow-lg">
+          <div className="mt-6 rounded-xl overflow-hidden shadow-md border border-gray-200">
             <iframe
               src="https://maps.google.com/maps?q=Nairobi&t=&z=13&ie=UTF8&iwloc=&output=embed"
               width="100%"

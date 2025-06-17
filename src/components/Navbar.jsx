@@ -18,23 +18,28 @@ export default function Navbar() {
   const navLinks = ['Book a Call', 'Services', 'Portfolio', 'Contact'];
 
   return (
-    <nav className="fixed top-0 left-0 w-full z-50 bg-gray-900/90 backdrop-blur-md shadow-lg">
-      <div className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
+    <nav className="fixed top-0 left-0 w-full z-50 bg-[#0a0f1c]/80 backdrop-blur-md border-b border-gray-700 shadow-xl">
+      <div className="max-w-7xl mx-auto px-6 py-8 flex items-center justify-between">
         {/* Logo */}
-        <h1 className="text-2xl font-extrabold text-amber-600 cursor-pointer select-none">
-          kode
-        </h1>
+        <motion.h1
+          initial={{ opacity: 0, y: -10 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5 }}
+          className="text-2xl font-extrabold text-amber-500 cursor-pointer select-none tracking-tight hover:text-amber-400 transition"
+        >
+          kode<span className="text-white">.dev</span>
+        </motion.h1>
 
-        {/* Desktop Nav */}
+        {/* Desktop Navigation */}
         <div className="hidden md:flex space-x-10">
           {navLinks.map((item) => (
             <Link
               key={item}
               href={`#${item.toLowerCase().replace(/\s/g, '')}`}
-              className="relative text-amber-600 font-semibold hover:text-gray-300 transition-colors duration-300 group"
+              className="relative text-gray-200 font-medium hover:text-amber-400 transition duration-300 group"
             >
               {item}
-              <span className="absolute left-0 -bottom-1 w-0 h-0.5 bg-gray-200 transition-all group-hover:w-full"></span>
+              <span className="absolute left-0 -bottom-1 w-0 h-0.5 bg-amber-400 transition-all duration-300 group-hover:w-full"></span>
             </Link>
           ))}
         </div>
@@ -42,14 +47,14 @@ export default function Navbar() {
         {/* Mobile Toggle Button */}
         <button
           aria-label="Toggle menu"
-          className="md:hidden text-gray-300 hover:text-blue-400 transition-colors duration-300"
+          className="md:hidden text-gray-300 hover:text-amber-400 transition duration-300"
           onClick={toggleMenu}
         >
           {isOpen ? <X size={28} /> : <Menu size={28} />}
         </button>
       </div>
 
-      {/* Mobile Menu with animation */}
+      {/* Mobile Menu */}
       <AnimatePresence>
         {isOpen && (
           <motion.div
@@ -58,14 +63,14 @@ export default function Navbar() {
             animate="visible"
             exit="hidden"
             variants={menuVariants}
-            className="md:hidden bg-gray-800 shadow-lg px-6 py-4 space-y-4 border-t border-gray-700"
+            className="md:hidden bg-[#0d1327] px-6 py-6 space-y-4 border-t border-gray-700 shadow-xl"
           >
             {navLinks.map((item) => (
               <Link
                 key={item}
                 href={`#${item.toLowerCase().replace(/\s/g, '')}`}
-                onClick={() => setIsOpen(false)} // Close menu on link click
-                className="block text-gray-300 font-semibold hover:text-blue-400 transition-colors duration-300"
+                onClick={() => setIsOpen(false)}
+                className="block text-gray-200 text-lg font-medium hover:text-amber-400 transition duration-300"
               >
                 {item}
               </Link>
